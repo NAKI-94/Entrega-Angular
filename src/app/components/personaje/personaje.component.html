@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>Angular Dialog</h2>
+@if(personaje){
+    <mat-dialog-content>
+        <mat-card class="example-card" appearance="outlined" >
+            <mat-card-header>
+              <div mat-card-avatar ></div>
+              <mat-card-title>{{personaje.name}}</mat-card-title>
+              <mat-card-subtitle>{{personaje.species}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="personaje.image" >
+            <mat-card-content>
+              <p>
+                origen: {{personaje.origin.name}}
+                status : {{personaje.status}}
+                location :{{personaje.location.name}}
+              </p>
+            </mat-card-content>
+           
+          </mat-card>
+    </mat-dialog-content>
+}@else {
+    <mat-spinner></mat-spinner>}
+
